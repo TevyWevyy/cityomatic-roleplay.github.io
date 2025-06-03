@@ -53,7 +53,7 @@
     document.addEventListener("DOMContentLoaded", async function () {
       const iframe = document.getElementById("kick-stream");
       const yourDomain = "hollywoodiownu.github.io"; // << ✅ your real domain
-      const twitchChannel = "hollywoodiownu"; // << ✅ your Twitch channel name
+      const twitchChannel = "1tevywevyy"; // << ✅ your Twitch channel name
       const twitchClientID = "kimne78kx3ncx6brgo4mv6wki5h1ko"; // ✅ Twitch's public client ID
       let isTwitchLive = false;
 
@@ -81,13 +81,13 @@
         iframe.src = `https://player.twitch.tv/?channel=${twitchChannel}&parent=${yourDomain}`;
         console.log("✅ Twitch is live — switching to Twitch!");
       } else {
-        iframe.src = `https://player.kick.com/hollywoodiownu`;
+        iframe.src = `https://player.kick.com/tevywevy`;
         console.log("✅ Twitch offline — staying on .");
       }
 
       // 🔥 Manual Buttons still work
       document.getElementById("kickBtn").addEventListener("click", function () {
-        iframe.src = "https://player.kick.com/hollywoodiownu";
+        iframe.src = "https://player.kick.com/tevywevy";
       });
 
       document.getElementById("twitchBtn").addEventListener("click", function () {
