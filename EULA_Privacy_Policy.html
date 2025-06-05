@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hollywoodiownu Extensions Hub</title>
+  <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #00ff99;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 🧠 Spread top and bottom */
+  align-items: center;
+  height: 100vh; /* 🚫 Full height, no scrolling */
+  overflow: hidden; /* 🔥 No scrollbars */
+  text-align: center;
+  user-select: none; /* 🚫 No text selection */
+  -webkit-user-select: none; /* 🚫 Safari/Chrome */
+  -moz-user-select: none; /* 🚫 Firefox */
+  -ms-user-select: none; /* 🚫 Edge/IE */
+  pointer-events: auto; /* ✅ Keep click working */
+}
+
+
+h1 {
+  color: #727272;
+  font-size: 16px;
+  margin: 20px 0 10px 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.game-item {
+  width: 200px;
+  height: 300px;
+  background: #222;
+  border: 2px solid #00ff99;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ff99;
+}
+
+.game-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box {
+  display: none;
+  background: #222;
+  border: 2px solid #00ff99;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#eulaButton, #privacyButton {
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #00ff99;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#eulaPopup, #privacyPopup {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 700px;
+  background: #111;
+  border: 2px solid gold;
+  padding: 20px;
+  border-radius: 10px;
+  color: gold;
+  font-size: 12px;
+  overflow-y: auto;
+  max-height: 500px;
+  z-index: 9999;
+  text-align: left;
+}
+
+.footer {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Hollywoodiownu Extension Hub</h1>
+
+  <div class="game-gallery">
+    <div class="game-item" id="spraythat">
+      <img src="img/spraythat_backgroundimg.png" alt="SprayThat 2.0">
+    </div>
+    <div class="game-item">
+      <img src="img/comingsoon.png" alt="Coming Soon">
+    </div>
+    <div class="game-item">
+      <img src="img/comingsoon.png" alt="Coming Soon">
+    </div>
+    <div class="game-item">
+      <img src="img/comingsoon.png" alt="Coming Soon">
+    </div>
+  </div>
+
+  <div class="box" id="spraythatBox">
+    <h1>SprayThat 2.0 Setup</h1>
+    <p>This extension was created by HOLLYWOODIOWNU aka Lary Gary Mods.<br>
+    It is licensed for use on Twitch with permission.<br>
+    No streamer setup required. Just spray the roaches and have fun!</p>
+    <button id="eulaButton">View EULA</button>
+    <button id="privacyButton">View Privacy Policy</button>
+  </div>
+
+  <!-- EULA Popup -->
+  <div id="eulaPopup">
+    <h2>SprayThat 2.1 END USER LICENSE AGREEMENT (EULA)</h2>
+    <p>Version 2.1 - Copyright (c) 2025 HOLLYWOODIOWNU - Lary Gary Mods<br>All Rights Reserved.</p>
+  
+    <p><strong>IMPORTANT:</strong><br>
+    By downloading, installing, or using SprayThat 2.1, you confirm that you are at least 18 YEARS OF AGE and agree to be legally bound by the terms of this agreement.</p>
+  
+    <p><strong>LICENSE GRANT</strong><br>
+    You are granted a single, revocable, non-exclusive, non-transferable license to install and use SprayThat 2.1 for PERSONAL USE ONLY.</p>
+  
+    <p><strong>PROHIBITED ACTIONS</strong><br>
+    • Redistribute, resell, sublicense, rent, lease, or lend SprayThat 2.1.<br>
+    • Modify, adapt, translate, reverse engineer, decompile, or disassemble.<br>
+    • Extract or reuse any assets (images, audio, scripts, data).<br>
+    • Circumvent any license validation or DRM.</p>
+  
+    <p><strong>INTELLECTUAL PROPERTY</strong><br>
+    SprayThat 2.1 is property of HOLLYWOODIOWNU and Lary Gary Mods. No ownership is transferred.</p>
+  
+    <p><strong>ENFORCEMENT & TERMINATION</strong><br>
+    Breach of this EULA terminates your license immediately. Access can be revoked without notice.</p>
+  
+    <p><strong>NO WARRANTY</strong><br>
+    SprayThat 2.1 is provided "AS IS" without any warranty. Use at your own risk.</p>
+  
+    <p><strong>MODIFICATIONS</strong><br>
+    HOLLYWOODIOWNU reserves the right to update, modify, or change this EULA at any time without prior notice.</p>
+  
+    <!-- 🔥 New Section You Asked For -->
+    <p><strong>ADDITIONAL TERMS REGARDING TWITCH USAGE</strong><br>
+    SprayThat 2.1 may be used within the Twitch ecosystem for display purposes only.<br><br>
+    Twitch is strictly prohibited from reselling, modifying, distributing, copying, or profiting from SprayThat 2.1, its code, assets, or derivatives without a direct written agreement personally signed by HOLLYWOODIOWNU.<br><br>
+    No click-through agreement, Developer Terms, or implied consent overrides this condition.<br>
+    Any conflicting Twitch policies are considered null and void as to SprayThat 2.1.<br>
+    Full legal ownership remains exclusively with HOLLYWOODIOWNU unless renegotiated in writing, in person.</p>
+  
+    <p><strong>CONTACT</strong><br>
+    larygarykevin@gmail.com</p>
+  
+    <p><strong>BY INSTALLING OR USING SPRAYTHAT 2.1, YOU AGREE TO ALL TERMS STATED ABOVE.</strong></p>
+  </div>
+  
+  <!-- Privacy Policy Popup -->
+  <div id="privacyPopup">
+    <h2>SprayThat 2.1 Privacy Policy</h2>
+    <p>No personal data is collected or stored. All actions happen within Twitch according to Twitch's privacy policies.</p>
+    <p>For questions, contact: larygarykevin@gmail.com</p>
+  </div>
+
+  <div class="footer">
+    © 2025 HOLLYWOODIOWNU - Lary Gary Mods
+  </div>
+
+  <script>
+    const spraythatBtn = document.getElementById('spraythat');
+    const spraythatBox = document.getElementById('spraythatBox');
+    const eulaButton = document.getElementById('eulaButton');
+    const privacyButton = document.getElementById('privacyButton');
+    const eulaPopup = document.getElementById('eulaPopup');
+    const privacyPopup = document.getElementById('privacyPopup');
+
+    spraythatBtn.addEventListener('click', () => {
+      spraythatBox.style.display = spraythatBox.style.display === 'none' ? 'block' : 'none';
+    });
+
+    eulaButton.addEventListener('click', () => {
+      privacyPopup.style.display = 'none';
+      eulaPopup.style.display = eulaPopup.style.display === 'none' ? 'block' : 'none';
+    });
+
+    privacyButton.addEventListener('click', () => {
+      eulaPopup.style.display = 'none';
+      privacyPopup.style.display = privacyPopup.style.display === 'none' ? 'block' : 'none';
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        eulaPopup.style.display = 'none';
+        privacyPopup.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
